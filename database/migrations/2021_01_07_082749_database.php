@@ -16,10 +16,10 @@ class Database extends Migration
         Schema::create('actors', function (Blueprint $table) {
             $table->Increments('id');
             $table->string('fname', 32);
-            $table->string('lname');
-            $table->string('note');
-            $table->string('imgpath');
-            $table->timestamp('deleted_at')->nullable();
+            $table->string('lname', 32);
+            $table->string('note', 64);
+            $table->string('imgpath', 128);
+            $table->timestamps();
         });
 
         Schema::create('genres', function (Blueprint $table) {

@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ActorController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,3 +17,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+// Route::get('/actor', [ActorController::class, 'index']);
+// or
+// Route::get('/actor', 'App\Http\Controllers\ActorController@index');
+
+Route::resource('actor', ActorController::class);

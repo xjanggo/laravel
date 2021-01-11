@@ -10,7 +10,6 @@ class Actor extends Model
     use HasFactory;
     public $timestamps = false;
     protected $fillable = ['fname', 'lname', 'note', 'imgpath'];
-    use SoftDeletes;
 
     public function role()
     {
